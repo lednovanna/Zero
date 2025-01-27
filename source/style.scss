@@ -23,6 +23,7 @@ $color_18: #6156DC;
 $color_19: #EF6010;
 $color_20: #A73EED;
 $color_21: #8F8F8F;
+$color_22: #898989;
 $fz-xs: 12px;
 $fz-s: 14px;
 $fz-m: 16px;
@@ -308,17 +309,13 @@ a {
 
             }
           }
-          .header__content-image {
-            
-            .content-img {
-               max-width: 100%;
-               height: auto;
-               max-width: 600px;
-            
-            }
-          }
+          
         }
 
+        .content-img {
+             width: 601px;
+               height: 523px;
+           }
         //**********************************************************************************//
       .main-block__container {
            background: $color_11;
@@ -499,7 +496,7 @@ a {
 
             .advantage-cards__item {
                 
-             box-shadow: 5px 12px 17px rgba(0, 0, 0, 0.09);
+             box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.09);
             
             padding: 40px 37px 34px 37px;
             
@@ -550,11 +547,15 @@ a {
                justify-content: center; 
                padding: 40 px 37px;
             }
-////////////////////////////////////////////////////////////////////////////////////////////*
+          }  
+/////JOB CARDS///////////////////////////////////////////////////////////////////////////////////////*
 
 .main-block__jobs {
+    padding: 0 20px;
     margin-top: 119px;
-
+    
+    width: 100%;
+      
     .jobs-titleBlock {
         display: flex;
         justify-content: center;
@@ -567,9 +568,134 @@ a {
         @extend %mnsubtitle
     }
 }
+    .job-cards {
+        margin-top: 80px;
+        display: flex;
+            gap: 60px;
+        .job-cards__buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 69px;
+            
+            
+            .arrow-icon {
+                
+                cursor: pointer;
+                padding: 12px;
+                width: 60px ;
+                height: 60px;
+                border-radius: 8px;
+            }
+            
+        }
+        .orange {
+                background: $color_19;
+            }
 
+            .job-cards__body {
+                display: flex;
+                justify-content: center;
+                
+                .job-cards__item {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1 1 calc(45% - 20px);
+                    height: 465px; 
+                    width: 380px; 
+                    background-color: #fff;
+                    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.15);
+                    border-radius: 10px;
+                    padding: 10px;
+                    text-align: center;
+                     .item-dotsIcon {
+                        margin-top: 40px;
+                        margin-left: 260px;
+                        cursor: pointer;
+                     }
+                     .item-userImg {
+                        width: 83px;
+                        height: 83px;
+                        align-self: center;
+                     }
+                     .job-card__title {
+                        margin-top: 41px;
+                        font-family: $ff-os;
+                        font-size: $fz-l;
+                        color: $color_17;
+                     }
+                     .job-card__subtitle {
+                        margin-top: 16px;
+                        color: $color_2;
+                        font-family: $ff-os;
+                        font-size: $fz-s;
+                     }
+                     .job-card__salary {
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 44px;
+                        gap: 10px;
+                        font-size: $fz-m;
+                        font-family: $ff-os;
+                        color: $color_17;
+                        span {
+                            color: $color_22;
+                            font-size: $fz-s;
+                            font-family: $ff-os;
+                        }
+                     }
+                     .job-card__location {
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 14px;
+                        gap: 10px;
+                        .location-city {
+                            font-size: $fz-m;
+                            font-family: $ff-os;
+                            color: $color_17;
+                            
+                        }
+                        .location-city__map {
+                                color: $color_22;
+                                font-size: $fz-s;
+                                font-family: $ff-os;
+                            }
+                       }
+                       .job-card__bottom {
+                        display: flex;
+                        justify-content: center;
+                        gap: 29px;
+                        margin-top: 33px;
+                        .heart-icon {
+                            padding: 16px;
+                            border-radius: 50px;
+                        }
+                        .active {
+                            background: $color_19;
+                        }
+                        .job-card__btn {
+                            
+                            justify-content: center;
+                            align-items: center;
+                            background: $color_6;
+                            padding: 15px 35px;
+                            border: none;
+                            border-radius: 47px;
+                            cursor: pointer;
+                            color: $color_11;
+                            font-family: $ff-os;
+                            font-size: $fz-m;
+                            
+                        }
 
-    } 
+                       }
+                }
+               
+            }
+
+    }
+
+     
 
 
            

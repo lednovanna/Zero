@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
-.main-block__container .main-block__jobs .jobs__title {
+.main-block__jobs .jobs__title {
   text-align: center;
   font-family: "Oswald", serif;
   font-size: 40px;
@@ -11,7 +11,7 @@
   font-weight: 400;
 }
 
-.main-block__container .main-block__jobs .jobs__subtitle {
+.main-block__jobs .jobs__subtitle {
   margin-top: 20px;
   text-align: center;
   max-width: 600px;
@@ -275,10 +275,10 @@ a {
   font-family: "Open Sans", serif;
   margin-left: 10px;
 }
-.header__content-bottom .header__content-image .content-img {
-  max-width: 100%;
-  height: auto;
-  max-width: 600px;
+
+.content-img {
+  width: 601px;
+  height: 523px;
 }
 
 .main-block__container {
@@ -462,8 +462,8 @@ a {
   margin-top: 60px;
 }
 .main-block__container .advantages-cards__body .advantage-cards__item {
-  -webkit-box-shadow: 5px 12px 17px rgba(0, 0, 0, 0.09);
-          box-shadow: 5px 12px 17px rgba(0, 0, 0, 0.09);
+  -webkit-box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.09);
+          box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.09);
   padding: 40px 37px 34px 37px;
 }
 .main-block__container .advantages-cards__body .advantages-icon {
@@ -505,14 +505,169 @@ a {
           justify-content: center;
   padding: 40 px 37px;
 }
-.main-block__container .main-block__jobs {
+
+.main-block__jobs {
+  padding: 0 20px;
   margin-top: 119px;
+  width: 100%;
 }
-.main-block__container .main-block__jobs .jobs-titleBlock {
+.main-block__jobs .jobs-titleBlock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.job-cards {
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 60px;
+}
+.job-cards .job-cards__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 69px;
+}
+.job-cards .job-cards__buttons .arrow-icon {
+  cursor: pointer;
+  padding: 12px;
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+}
+.job-cards .orange {
+  background: #EF6010;
+}
+.job-cards .job-cards__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.job-cards .job-cards__body .job-cards__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 calc(45% - 20px);
+          flex: 1 1 calc(45% - 20px);
+  height: 465px;
+  width: 380px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 4px 17px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 17px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+.job-cards .job-cards__body .job-cards__item .item-dotsIcon {
+  margin-top: 40px;
+  margin-left: 260px;
+  cursor: pointer;
+}
+.job-cards .job-cards__body .job-cards__item .item-userImg {
+  width: 83px;
+  height: 83px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+.job-cards .job-cards__body .job-cards__item .job-card__title {
+  margin-top: 41px;
+  font-family: "Open Sans", serif;
+  font-size: 20px;
+  color: #323232;
+}
+.job-cards .job-cards__body .job-cards__item .job-card__subtitle {
+  margin-top: 16px;
+  color: #4238AF;
+  font-family: "Open Sans", serif;
+  font-size: 14px;
+}
+.job-cards .job-cards__body .job-cards__item .job-card__salary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 44px;
+  gap: 10px;
+  font-size: 16px;
+  font-family: "Open Sans", serif;
+  color: #323232;
+}
+.job-cards .job-cards__body .job-cards__item .job-card__salary span {
+  color: #898989;
+  font-size: 14px;
+  font-family: "Open Sans", serif;
+}
+.job-cards .job-cards__body .job-cards__item .job-card__location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 14px;
+  gap: 10px;
+}
+.job-cards .job-cards__body .job-cards__item .job-card__location .location-city {
+  font-size: 16px;
+  font-family: "Open Sans", serif;
+  color: #323232;
+}
+.job-cards .job-cards__body .job-cards__item .job-card__location .location-city__map {
+  color: #898989;
+  font-size: 14px;
+  font-family: "Open Sans", serif;
+}
+.job-cards .job-cards__body .job-cards__item .job-card__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 29px;
+  margin-top: 33px;
+}
+.job-cards .job-cards__body .job-cards__item .job-card__bottom .heart-icon {
+  padding: 16px;
+  border-radius: 50px;
+}
+.job-cards .job-cards__body .job-cards__item .job-card__bottom .active {
+  background: #EF6010;
+}
+.job-cards .job-cards__body .job-cards__item .job-card__bottom .job-card__btn {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #544CAC;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 47px;
+  cursor: pointer;
+  color: white;
+  font-family: "Open Sans", serif;
+  font-size: 16px;
 }

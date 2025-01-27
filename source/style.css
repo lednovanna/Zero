@@ -1,0 +1,518 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
+.main-block__container .main-block__jobs .jobs__title {
+  text-align: center;
+  font-family: "Oswald", serif;
+  font-size: 40px;
+  letter-spacing: 5%;
+  line-height: 50px;
+  color: #353434;
+  font-weight: 400;
+}
+
+.main-block__container .main-block__jobs .jobs__subtitle {
+  margin-top: 20px;
+  text-align: center;
+  max-width: 600px;
+  color: #A8A8A8;
+  font-family: "Open Sans", serif;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html, body {
+  margin: 0 auto;
+  background-color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0px 10px;
+  width: 100%;
+}
+
+.header {
+  background: #F5F7FF;
+  max-width: 100%;
+  padding-top: 23px;
+}
+.header .header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.header .header_logo {
+  height: 45px;
+  width: 104px;
+}
+.header .menu_link {
+  color: #272323;
+}
+
+.menu_item {
+  font-size: 14px;
+  font-family: "Open Sans", serif;
+  font-style: normal;
+  margin-right: 20px;
+  letter-spacing: 2%;
+  line-height: 24px;
+  font-weight: 500;
+  padding: 5px;
+}
+
+.menu_link {
+  -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.menu_link:hover {
+  color: #4238AF;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.header_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+  text-align: center;
+}
+
+.input__login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.input-login__input {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.input-login__input .search-input {
+  border: none;
+  background-color: white;
+  color: #A5A5A5;
+  padding: 8px 8px 8px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 200;
+  width: 307px;
+  font-family: "Open Sans", serif;
+  font-size: 14px;
+  letter-spacing: 2%;
+  border-radius: 50px;
+}
+.input-login__input .search-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 6px;
+  font-size: 16px;
+  color: #aaa;
+  top: 2px;
+  background-color: #F5F7FF;
+  padding: 7px;
+  border-radius: 50px;
+  margin: 1px;
+}
+
+.input-login__autorisation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 20px;
+}
+.input-login__autorisation .btn_signup {
+  color: #544CAC;
+  font-size: 16px;
+  letter-spacing: 2%;
+  font-family: "Open Sans", serif;
+  cursor: pointer;
+  position: relative;
+}
+.input-login__autorisation .btn_signup:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 25;
+  -webkit-transform: translateY(50%) rotate(-50deg);
+          transform: translateY(50%) rotate(-50deg);
+  width: 15px;
+  height: 1px;
+  background-color: #333;
+}
+.input-login__autorisation .btn_login {
+  color: #272323;
+  font-size: 16px;
+  letter-spacing: 2%;
+  font-family: "Open Sans", serif;
+  margin-left: 18px;
+  cursor: pointer;
+  position: relative;
+}
+
+.header__content-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 56px;
+  background: #F5F7FF;
+  width: 100%;
+}
+
+.header__content-top {
+  margin-top: 20px;
+}
+
+.header__content-header {
+  font-family: "Prompt", serif;
+  font-size: 45px;
+  line-height: 55px;
+  letter-spacing: 7%;
+  font-weight: 400;
+  color: #353434;
+}
+.header__content-header span {
+  color: #FF5C00;
+}
+
+.header__content-text {
+  margin-top: 18px;
+  color: #A8A8A8;
+  font-family: "Open Sans", serif;
+  font-size: 14px;
+  letter-spacing: 2%;
+  padding: 5px;
+}
+
+.header__content-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+}
+.header__content-bottom .header__content-btn {
+  background-color: #544CAC;
+  color: white;
+  padding: 3px 10px;
+  border: none;
+  border-radius: 6px;
+  width: 150px;
+  height: 44px;
+  font-family: "Open Sans", serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+.header__content-bottom .header__content-btn:hover {
+  opacity: 0.5;
+}
+.header__content-bottom .header__content-visual {
+  margin-left: 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__content-bottom .header__content-visual .visual__icon {
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+.header__content-bottom .header__content-visual .visual_btn {
+  color: #272323;
+  font-size: 16px;
+  font-family: "Open Sans", serif;
+  margin-left: 10px;
+}
+.header__content-bottom .header__content-image .content-img {
+  max-width: 100%;
+  height: auto;
+  max-width: 600px;
+}
+
+.main-block__container {
+  background: white;
+  margin-top: 32px;
+}
+.main-block__container .main-block-labels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.main-block__container .label-img {
+  max-width: 100%;
+}
+.main-block__container .main-block__findJob {
+  margin-top: 66px;
+}
+.main-block__container .main-block__findJob .findJob-text {
+  color: #FF5C00;
+  font-family: "Oswald", serif;
+  font-size: 12px;
+  letter-spacing: 5%;
+  margin-bottom: 19px;
+}
+.main-block__container .main-block__findJob .findJob-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+}
+.main-block__container .findJob-info__block {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+}
+.main-block__container .findJob-info__block h2 {
+  font-family: "Oswald", serif;
+  font-size: 40px;
+  letter-spacing: 5%;
+  font-weight: 400;
+  color: #353434;
+  line-height: 50px;
+}
+.main-block__container .findJob-info__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 51px;
+}
+.main-block__container .findJob-info__items .profile-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  background: #F5F7FF;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 16px;
+}
+.main-block__container .findJob-info__items .left-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.main-block__container .findJob-info__items .left-item .profile-item__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #F3E0FF;
+  color: #9444C9;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+.main-block__container .findJob-info__items .left-item .three {
+  background: #FFDECC;
+  color: #FF5C00;
+}
+.main-block__container .findJob-info__items .left-item .two {
+  background: #E7E9FE;
+}
+.main-block__container .findJob-info__items .left-item .profile-item__title {
+  color: #323232;
+  font-family: "Open Sans", serif;
+  font-size: 16px;
+  margin-left: 20px;
+  font-weight: 600;
+}
+.main-block__container .findJob-info__items .left-item .profile-item__text {
+  margin-top: 10px;
+  margin-left: 20px;
+  color: #A8A8A8;
+  font-family: "Open Sans", serif;
+  font-size: 12px;
+  line-height: 22px;
+}
+.main-block__container .profile-item:hover {
+  opacity: 0.5;
+}
+.main-block__container .findJob-info__video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main-block__container .findJob-info__video .findJob-info__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 45%;
+          flex: 1 1 45%;
+}
+.main-block__container .findJob-info__video .findJob-info__item iframe {
+  max-height: 433px;
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+}
+.main-block__container .main-block__advantages {
+  margin-top: 119px;
+}
+.main-block__container .advantages-titleBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.main-block__container .advantages-titleBlock .main-block__title {
+  text-align: center;
+  font-family: "Oswald", serif;
+  font-size: 40px;
+  letter-spacing: 5%;
+  line-height: 50px;
+  color: #353434;
+  font-weight: 400;
+}
+.main-block__container .advantages-titleBlock .main-block__subtitle {
+  margin-top: 20px;
+  text-align: center;
+  max-width: 600px;
+  color: #A8A8A8;
+  font-family: "Open Sans", serif;
+  line-height: 24px;
+  font-size: 14px;
+}
+.main-block__container .advantages-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.main-block__container .advantages-cards__body {
+  max-width: 350px;
+  margin-top: 60px;
+}
+.main-block__container .advantages-cards__body .advantage-cards__item {
+  -webkit-box-shadow: 5px 12px 17px rgba(0, 0, 0, 0.09);
+          box-shadow: 5px 12px 17px rgba(0, 0, 0, 0.09);
+  padding: 40px 37px 34px 37px;
+}
+.main-block__container .advantages-cards__body .advantages-icon {
+  padding: 8px;
+  border-radius: 7px;
+  width: 60px;
+  height: 60px;
+}
+.main-block__container .advantages-cards__body .advantages-card__title {
+  font-family: "Open Sans", serif;
+  font-size: 20px;
+  color: #323232;
+  font-weight: 600;
+}
+.main-block__container .advantages-cards__body .advantages-card__text {
+  font-family: "Open Sans", serif;
+  font-size: 14px;
+  color: #8F8F8F;
+}
+.main-block__container .advantages-cards__body .blue {
+  background: #6156DC;
+}
+.main-block__container .advantages-cards__body .orange {
+  background: #EF6010;
+}
+.main-block__container .advantages-cards__body .purple {
+  background: #A73EED;
+}
+.main-block__container .advantages-cards__body .advantages-card__title {
+  margin: 22px 0 15px 0;
+}
+.main-block__container .advantages-cards__body .top {
+  margin-top: -25px;
+  background: #F9FAFF;
+}
+.main-block__container .titleBlock-body {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 40 px 37px;
+}
+.main-block__container .main-block__jobs {
+  margin-top: 119px;
+}
+.main-block__container .main-block__jobs .jobs-titleBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}

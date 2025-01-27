@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+$color_1:#272323;
+$color_2: #4238AF;
+$color_3: #353434;
+$color_4: #FF5C00;
+$color_5: #A8A8A8;
+$color_6:  #544CAC;
+$color_7: #F5F7FF;
+$color_8: #F9FAFF;
+$color_9: #CED5F4;
+$color_10: #625BAE;
+$color_11: #ffff;
+$color_12: #A5A5A5;
+$color_13: #9444C9;
+$color_14: #F3E0FF;
+$color_15: #E7E9FE;
+$color_16: #FFDECC;
+$color_17: #323232;
+$color_18: #6156DC;
+$color_19: #EF6010;
+$color_20: #A73EED;
+$color_21: #8F8F8F;
+$fz-xs: 12px;
+$fz-s: 14px;
+$fz-m: 16px;
+$fz-l: 20px;
+$fz-xl: 24px;
+$fz-xxl: 40px;
+$fz-xxxl: 45px;
+$ff-prom: "Prompt", serif;
+$ff-os: "Open Sans", serif;
+$ff-o: "Oswald", serif;
+%mntitle {
+    
+        text-align: center;
+        font-family: $ff-o;
+        font-size: $fz-xxl;
+        letter-spacing: 5%;
+        line-height: 50px;
+        color: $color_3;
+        font-weight: 400;
+       
+}
+
+%mnsubtitle {
+    margin-top: 20px;
+        text-align: center;
+        max-width: 600px;
+        color: $color_5;
+        font-family: $ff-os;
+        line-height: 24px;
+        font-size: $fz-s;
+}
+
+
+
+*{ 
+    margin: 0; 
+    padding: 0;
+    box-sizing: inherit;
+    
+}
+
+html, body {
+    margin: 0 auto;
+    background-color: $color_11;
+    box-sizing: border-box;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+    padding: 0px 10px;
+    width: 100%;
+    
+    
+}
+
+.header {
+    background: $color_7;
+    max-width: 100%;
+    padding-top: 23px;
+    .header__container{
+        display: flex;
+        justify-content: space-around;
+        
+    }
+    .header_logo{
+      height: 45px;
+      width: 104px;
+    }
+   
+   
+    .menu_link {
+      color: $color_1;
+}
+    
+}
+
+
+
+ .menu_item {
+        font-size: $fz-s;
+        font-family: $ff-os;
+        font-style: normal;
+        margin-right: 20px;
+        letter-spacing: 2%;
+        line-height: 24px;
+        font-weight: 500;
+        padding: 5px ;
+        
+    }  
+
+    .menu_link {
+        transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .menu_link:hover {
+        color: $color_2; 
+        background-color: #f0f0f0; 
+        border-radius: 5px; 
+        
+    }
+
+.header_menu {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+ .menu_list{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    text-align: center;
+ }
+
+ .input__login {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+ }
+
+ .input-login__input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    
+    
+
+    .search-input {
+        border: none;
+        background-color: $color_11;
+        color: $color_12;
+        padding: 8px 8px 8px 10px;
+        border-radius: 8px;
+        font-size: 12px;
+        font-weight: 200;
+        width: 307px;
+        font-family: $ff-os;
+        font-size: $fz-s;
+        letter-spacing: 2%;
+        border-radius: 50px;
+    }
+    .search-icon {
+        display: flex;
+            position: absolute;
+            right: 6px;
+            font-size: 16px; 
+            color: #aaa;
+            top: 2px;
+            background-color: $color_7;
+            padding: 7px;
+            border-radius: 50px;
+            margin: 1px;
+        }
+        
+ }
+.input-login__autorisation {
+             display: flex;
+            margin-left: 20px;
+            
+            
+            
+            .btn_signup {
+                color: $color_6;
+                font-size: $fz-m;
+                letter-spacing: 2%;
+                font-family: $ff-os;
+                cursor: pointer;
+                position: relative;
+                
+            }
+
+           
+            
+
+            .btn_signup:not(:last-child)::after {
+                content: ''; 
+                position: absolute;
+                top: 50%;
+                right: 25; 
+                transform: translateY(50%) rotate(-50deg); 
+                width: 15px; 
+                height: 1px; 
+                background-color: #333; 
+                
+            }
+            
+             .btn_login {
+                color: $color_1;
+                font-size: $fz-m;
+                letter-spacing: 2%;
+                font-family: $ff-os;
+                margin-left: 18px;
+                cursor: pointer;
+                position: relative;
+            }
+        }
+
+
+
+        .header__content-block {
+            display: flex;
+            margin-top: 56px;
+            background: $color_7;
+            width: 100%;
+        }
+
+        .header__content-top {
+            
+            margin-top: 20px;
+        
+        }
+
+        .header__content-header {
+            font-family: $ff-prom;
+            font-size: $fz-xxxl;
+            line-height: 55px;
+            letter-spacing: 7%;
+            font-weight: 400;
+            color: $color_3;
+            span{
+                color: $color_4;
+            }
+        }
+
+        .header__content-text {
+            margin-top: 18px;
+            color: $color_5;
+            font-family: $ff-os;
+            font-size: $fz-s;
+            letter-spacing: 2%;
+            padding: 5px;
+
+        }
+        
+        .header__content-bottom {
+            display: flex;
+            margin-top: 30px;
+            
+          .header__content-btn {
+            background-color: $color_6;
+            color: $color_11;
+            padding: 3px 10px;
+            border: none;
+            border-radius: 6px;
+            width: 150px;
+            height: 44px;
+            font-family: $ff-os;
+            font-size: $fz-m;
+            cursor: pointer;
+            
+          }
+
+           .header__content-btn:hover {
+                opacity: 0.5;
+            }
+
+          .header__content-visual {
+            margin-left: 34px;
+            display: flex;
+            justify-content: center;
+                align-items: center;
+            .visual__icon {
+                width: 44px;
+                height: 44px;
+                cursor: pointer;
+            }
+            
+           
+            
+            .visual_btn {
+                color: $color_1;
+                font-size: $fz-m;
+                font-family: $ff-os;
+                margin-left: 10px;
+                
+                
+
+            }
+          }
+          .header__content-image {
+            
+            .content-img {
+               max-width: 100%;
+               height: auto;
+               max-width: 600px;
+            
+            }
+          }
+        }
+
+        //**********************************************************************************//
+      .main-block__container {
+           background: $color_11;
+           margin-top: 32px;
+     
+       .main-block-labels {
+        display: flex;
+        justify-content: space-between;
+
+       } 
+       .label-img {
+         max-width: 100%;
+       }
+
+    .main-block__findJob {
+        margin-top: 66px;
+        .findJob-text {
+            color: $color_4;
+            font-family: $ff-o;
+            font-size: $fz-xs;
+            letter-spacing: 5%;
+            margin-bottom: 19px;
+        }
+
+        .findJob-container {
+            display: flex;
+            gap: 40px;
+        }
+    }  
+
+     
+    .findJob-info__block {
+    flex: 1 1 50%; 
+}
+     .findJob-info__block h2 {
+        
+        font-family: $ff-o;
+        font-size: $fz-xxl;
+        letter-spacing: 5%;
+        font-weight: 400;
+        color: $color_3;
+        line-height: 50px;
+     }
+
+     .findJob-info__items {
+
+        display: flex;
+        flex-direction: column;
+        margin-top: 51px;
+        .profile-item {
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            background: $color_7;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 16px;
+            
+            }
+            
+            .left-item {
+                display: flex;
+                  
+            
+
+
+                .profile-item__number {
+                    display: flex;
+                   background: $color_14;
+                    color: $color_13;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 6px;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px; 
+                        
+                }
+                
+
+                .three {
+                    background: $color_16;
+                    color: $color_4;
+                }
+
+                .two {
+                    background: $color_15;
+                }
+                .profile-item__title {
+                    color: $color_17;
+                    font-family: $ff-os;
+                    font-size: $fz-m;
+                    margin-left: 20px;
+                    font-weight: 600;
+                    
+                }
+
+                .profile-item__text {
+                    margin-top: 10px;
+                    margin-left: 20px;
+                    color: $color_5;
+                    font-family: $ff-os;
+                    font-size: $fz-xs;
+                    line-height: 22px;
+                    
+
+                }
+            }
+        } 
+        .profile-item:hover {
+                opacity: 0.5;
+     }
+    
+    
+      .findJob-info__video {
+        display: flex;
+        flex: 1 1 50%; 
+    
+        justify-content: center;
+        align-items: center;
+
+        .findJob-info__item {
+            flex: 1 1 45%;
+            
+        }
+
+        .findJob-info__item iframe {
+            max-height: 433px;
+            width: 100%;
+            border: none;
+            border-radius: 20px;
+        }
+      }
+
+      ////////////////////////////////////////////////////////////////////////////////*
+       
+      .main-block__advantages {
+        
+        margin-top: 119px;
+        
+      }
+      .advantages-titleBlock {
+            display: flex;  
+           justify-content: center;  
+            
+         
+          .main-block__title {
+        text-align: center;
+        font-family: $ff-o;
+        font-size: $fz-xxl;
+        letter-spacing: 5%;
+        line-height: 50px;
+        color: $color_3;
+        font-weight: 400;
+      }  
+
+      
+
+      .main-block__subtitle {
+        margin-top: 20px;
+        text-align: center;
+        max-width: 600px;
+        color: $color_5;
+        font-family: $ff-os;
+        line-height: 24px;
+        font-size: $fz-s;
+        
+      }
+         }
+        .advantages-cards {
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        .advantages-cards__body {
+           max-width: 350px;
+            margin-top: 60px;
+
+            .advantage-cards__item {
+                
+             box-shadow: 5px 12px 17px rgba(0, 0, 0, 0.09);
+            
+            padding: 40px 37px 34px 37px;
+            
+            
+            }
+            
+
+            .advantages-icon {
+                padding: 8px;
+                border-radius: 7px;
+                width: 60px;
+                height: 60px;
+            }
+
+            .advantages-card__title {
+                font-family: $ff-os;
+                font-size:  $fz-l;
+                color: $color_17;
+                font-weight: 600;
+            }
+
+            .advantages-card__text {
+                font-family: $ff-os;
+                font-size: $fz-s;
+                color: $color_21;
+            }
+            
+
+            .blue {
+                background: $color_18;
+                
+            }
+            .orange {
+                background: $color_19;
+            }
+            .purple {
+                background: $color_20;
+            }
+            .advantages-card__title {
+                margin: 22px 0 15px 0;
+            }
+            .top {
+                margin-top: -25px;
+                background: $color_8;
+            }
+        }
+         .titleBlock-body {
+               justify-content: center; 
+               padding: 40 px 37px;
+            }
+////////////////////////////////////////////////////////////////////////////////////////////*
+
+.main-block__jobs {
+    margin-top: 119px;
+
+    .jobs-titleBlock {
+        display: flex;
+        justify-content: center;
+    }
+    .jobs__title {
+        @extend %mntitle
+    }
+
+    .jobs__subtitle {
+        @extend %mnsubtitle
+    }
+}
+
+
+    } 
+
+
+           

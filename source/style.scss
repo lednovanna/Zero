@@ -24,6 +24,8 @@ $color_19: #EF6010;
 $color_20: #A73EED;
 $color_21: #8F8F8F;
 $color_22: #898989;
+$color_23: #38318B;
+$color_24: #868686;
 $fz-xs: 12px;
 $fz-s: 14px;
 $fz-m: 16px;
@@ -555,7 +557,9 @@ a {
     margin-top: 119px;
     
     width: 100%;
-      
+   
+    
+     
     .jobs-titleBlock {
         display: flex;
         justify-content: center;
@@ -568,46 +572,88 @@ a {
         @extend %mnsubtitle
     }
 }
-    .job-cards {
+    .job__jobCards {
         margin-top: 80px;
         display: flex;
-            gap: 60px;
-        .job-cards__buttons {
+        
+        
+            
+        .action-button__buttons {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-left: 69px;
+            margin-left: 70px;
+            transform: translateX(-50%);
+            gap: 5px;
             
-            
-            .arrow-icon {
-                
+            .toggleButton {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                height: 40px;
+                border-radius: 8px;
+                transition: fill 0.3s ease;
+                transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+                fill: $color_19;
+            }
+            .swiper-button__left {
+                background: $color_8;
+                fill: $color_19;
                 cursor: pointer;
                 padding: 12px;
-                width: 60px ;
-                height: 60px;
-                border-radius: 8px;
+                
+               
+            }
+              
+
+             .swiper-button__right  {
+                background: $color_8;
+                color: $color_11;
+                cursor: pointer;
+                padding: 12px;
+                width: 40px ;
+                
+            }
+             
+
+
+            .orange {
+                background: $color_11;
+                color: $color_19;
+                 
+            }
+
+            .white {
+                background-color: #FFC085;
+                fill: $color_11;
             }
             
-        }
-        .orange {
-                background: $color_19;
-            }
+               }
+             
 
             .job-cards__body {
                 display: flex;
                 justify-content: center;
+             
+                transition: transform 0.3s ease-in-out;
                 
                 .job-cards__item {
+                    
+                    
+                    
                     display: flex;
                     flex-direction: column;
                     flex: 1 1 calc(45% - 20px);
                     height: 465px; 
-                    width: 380px; 
+                    max-width: 380px; 
                     background-color: #fff;
                     box-shadow: 0 4px 17px rgba(0, 0, 0, 0.15);
                     border-radius: 10px;
                     padding: 10px;
                     text-align: center;
+
+                    
                      .item-dotsIcon {
                         margin-top: 40px;
                         margin-left: 260px;
@@ -669,33 +715,238 @@ a {
                         .heart-icon {
                             padding: 16px;
                             border-radius: 50px;
+                            transition: filter 0.3s;
+                            background: $color_18;
+                            
                         }
-                        .active {
-                            background: $color_19;
-                        }
+                        
                         .job-card__btn {
                             
                             justify-content: center;
                             align-items: center;
-                            background: $color_6;
+                            background: $color_14;
                             padding: 15px 35px;
                             border: none;
                             border-radius: 47px;
                             cursor: pointer;
-                            color: $color_11;
+                            color: $color_14;
                             font-family: $ff-os;
                             font-size: $fz-m;
                             
+                            color: $color_23 ;
+                            
                         }
+                      
 
                        }
                 }
-               
+               .job-cards__item:hover {
+                transform: scale(1.1);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+              }
             }
+             .swiper {
+                
+                
+                padding: 30px;
+                        
+                    }
+               .swiper-slide {
+                        width: auto;
+                        transition: transform 0.5s ease, background-color 0.5s ease;
+                      }
 
+               .swiper-wrapper {
+                width: 65%; 
+                
+            }   
+            .swiper-slide-active {
+                transform: scale(1.1); 
+                
+                
+                transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+            }  
+           
+            .active-slide{
+                background: $color_8; /* Новый фон */
+                transform: scale(0.9); /* Увеличение */
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+            
+            /* Изменяем цвет кнопки */
+            .active-slide .job-card__btn {
+                background: #EF6010; /* Новый цвет кнопки */
+                color: white;
+            }
+            
+            /* Изменяем цвет иконки */
+            .active-slide .heart-icon {
+                filter: invert(100%); /* Делаем иконку белой */
+            }
+           
     }
 
+
+    .jobs__bottom-btn {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        width: 100%; 
+        margin-top: 76px;             
+    }
+     .bottom-btn  {
+               
+               
+               justify-content: center;
+                background: $color_6;
+                padding: 15px 35px;
+                border: none;
+                border-radius: 47px;
+                cursor: pointer;
+                color: $color_11;
+                font-family: $ff-os;
+                font-size: $fz-m;
+                width: 152px;
+                height: 49px;
+                align-items: center;
+                
+            }
+            .bottom-btn:hover{
+                opacity: 0.5;
+            }
+
+///reviews///////////////////////////////////////////////////
+
+.main-block__reviews {
+    margin-top: 119px;
+    
+    .reviews-titleBlock {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+       .titleBlock-body {
+         justify-content: center;
+         align-self: center;
+      
+    .main-block__title {
+        @extend %mntitle;
+    }
+    .main-block__subtitle {
+       @extend %mnsubtitle;
+        }
+     }
+        
+     }
+     .reviews-block__body {
+        margin-top: 45px;
+        
+
+     }
+     .reviews-block__item {
+        display: flex;
+        justify-content: space-between;
+        gap: 29px;
+     }
+
+     .reviews-block__img {
+         position: relative;
+       .review-img{
+            
+       }
+       .deco-img {
+            position: absolute;
+            top: 13px;
+            left: 50px;
+       }
+       .dotsSquare-img {
+           position: absolute;
+           top: 250px;
+           left: -2px;
+       }
+
+       
+     }
+
      
+    
+   .reviews-block__top{
+    margin-top: 35px;
+    
+   .reviews-block__title {
+        color: $color_17;
+        font-family: $ff-os ;
+        font-size: $fz-l;
+        font-weight: 600;
+        
+       } 
 
+       .reviews-block__subtitle {
+        margin-top: 13px;
+        color: $color_24;
+        font-family: $ff-os;
+        line-height: 24px;
+        font-size: $fz-s;
+       }
+    }
+    .reviews-block__rating {
+        margin-top: 16px;
+       
+       display: flex;
+       justify-content: flex-end;
+       gap: 10px;
+       .stars-icon {
+        height: 13px;
+        justify-content: center;
+        align-self: center;
+       }
+       .rating-points {
+        font-size: $fz-l;
+        color: $color_17;
+        font-weight: 600;
+        
+       } 
+    }
+    .reviews-block__userReview {
+        margin-top: 6px;
+        max-width: 730px;
+        
+        .userReview__text {
+            font-family: $ff-os;
+        line-height: 24px;
+        font-size: $fz-m;
+        color: $color_17; 
+        }
+       
+    }
+    .reviews-block__bottom {
+        margin-top: 51px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .reviews-button__left {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        transition: fill 0.3s ease;
+        transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+        fill: $color_19;
+        background-color: $color_8;
+        padding: 8px;
+        cursor: pointer;
+    }
+    .reviews-button__right {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        transition: fill 0.3s ease;
+        transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+        fill: $color_19;
+        background-color: $color_8;
+        padding: 8px;
+        cursor: pointer;
+    }
+   }
 
-           
+ 
+            

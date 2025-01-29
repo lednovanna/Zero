@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
     <link rel="stylesheet" href="source/style.css">
     <title>Zero</title>
 </head>
@@ -72,12 +74,12 @@
         <div class="page__main-block">
             <div class="main-block__container container">
                 <div class="main-block-labels">
-                    <img src="assets/img/Group1.jpg" alt="Label" class="label-img" width="57px" height="67px">
-                    <img src="assets/img/Group.jpg" alt="Label" class="label-img" width="126px" height="106px">
-                    <img src="assets/img/Group5.jpg" alt="Label" class="label-img" width="153px" height="69px">
-                    <img src="assets/img/Group2.jpg" alt="Label" class="label-img" width="120px" height="112px">
-                    <img src="assets/img/Group3.jpg" alt="Label" class="label-img" width="110px" height="72px">
-                    <img src="assets/img/Group4.jpg" alt="Label" class="label-img" width="105px" height="104px">
+                    <img src="assets/img/labelDesignStudio.jpg" alt="Label" class="label-img" width="57px" height="67px">
+                    <img src="assets/img/labelDesign.jpg" alt="Label" class="label-img" width="126px" height="106px">
+                    <img src="assets/img/labelGreenery.jpg" alt="Label" class="label-img" width="153px" height="69px">
+                    <img src="assets/img/labelNatural.jpg" alt="Label" class="label-img" width="120px" height="112px">
+                    <img src="assets/img/labelNature.jpg" alt="Label" class="label-img" width="110px" height="72px">
+                    <img src="assets/img/labelCompany.jpg" alt="Label" class="label-img" width="105px" height="104px">
                 </div>
                 <div class="main-block__findJob">
                     <div class="findJob-text">How It Works</div>
@@ -166,14 +168,21 @@
                     <p class="jobs__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                     </div>
                     </div>
-                    <div class="job-cards">
-                         <div class="job-cards__buttons">
-                           <a href="#"><img src="assets/icons/arrow-left.png" alt="arrow icon" class="arrow-icon orange"></a>
-                            <a href="#"><img src="assets/icons/arrow-right.png" alt="arrow icon" class="arrow-icon "></a>
+                    
+                        
+                    <div class=" job__jobCards">
+                        
+                            <div class="action-button__buttons">
+                           <a href="#"><img src="assets/icons/arrow-left.svg" alt="arrow icon" class="swiper-button__left toggleButton" ></a>
+                            <a href="#"><img src="assets/icons/arrow-right.svg" alt="arrow icon" class="swiper-button__right  toggleButton" ></a>
                             </div>
-                        <div class="job-cards__body">
-                           
-                            <div class="job-cards__item ">
+
+                        
+                           <div class="swiper mySwiper">
+                             <div class="swiper-wrapper">
+                                 
+                        <div class="job-cards__body swiper-slide ">
+                            <div class="job-cards__item  active-slide">
                                 
                                 <a href="#"><img src="assets/icons/dots.png" alt="dots icon" class="item-dotsIcon"></a>
                             <img src="assets/img/cardfoto.png" alt="User image" class="item-userImg">
@@ -191,13 +200,13 @@
                                      <div class="location-city__map">View map</div>
                                 </div>
                                 <div class="job-card__bottom">
-                                    <img src="assets/icons/heart.png" alt="Heart icon" class="heart-icon active">
-                                    <button class="job-card__btn">Apply Now</button>
+                                    <img src="assets/icons/heart.png" alt="Heart icon" class="heart-icon ">
+                                    <button class="job-card__btn toggleCardButton active-slide">Apply Now</button>
                                 </div>
-                            </div>
+                                </div>
                         </div>
-                        <div class="job-cards__body ">
-                            <div class="job-cards__item ">
+                        <div class="job-cards__body swiper-slide">
+                            <div class="job-cards__item active-slide ">
                                 <a href="#"><img src="assets/icons/dots.png" alt="dots icon" class="item-dotsIcon"></a>
                             <img src="assets/img/cardfoto2.png" alt="User image" class="item-userImg">
                             <div class="job-card__title">Database Programmer</div>
@@ -215,10 +224,10 @@
                                 <img src="assets/icons/heart.png" alt="Heart icon" class="heart-icon">
                                 <button class="job-card__btn">Apply Now</button>
                             </div>
-                           </div>
+                            </div>
                         </div>
-                        <div class="job-cards__body ">
-                            <div class="job-cards__item ">
+                            <div class="job-cards__body swiper-slide">
+                            <div class="job-cards__item active-slide">
                                 <a href="#"><img src="assets/icons/dots.png" alt="dots icon" class="item-dotsIcon"></a>
                             <img src="assets/img/cardfoto.png" alt="User image" class="item-userImg">
                             <div class="job-card__title">Database Programmer</div>
@@ -237,10 +246,145 @@
                                 <button class="job-card__btn">Apply Now</button>
                             </div>
                            </div>
+                           </div>
+                         
+                           <div class="job-cards__body swiper-slide">
+                            <div class="job-cards__item active-slide">
+                                <a href="#"><img src="assets/icons/dots.png" alt="dots icon" class="item-dotsIcon"></a>
+                            <img src="assets/img/cardfoto.png" alt="User image" class="item-userImg">
+                            <div class="job-card__title">Database Programmer</div>
+                            <div class="job-card__subtitle"> Marraz Team</div>
+                            <div class="job-card__salary">
+                                <img src="assets/icons/money.png" alt="money icon" class="money-icon ">
+                                <div class="salary-amount">$14,000 - $25,000 <span>/monthly</span></div>    
+                            </div>
+                            <div class="job-card__location">
+                                <img src="assets/icons/location.png" alt="location icon" class="location-icon ">
+                                 <div class="location-city">London, England</div> 
+                                 <div class="location-city__map">View map</div>
+                            </div>
+                            <div class="job-card__bottom">
+                                <img src="assets/icons/heart.png" alt="Heart icon" class="heart-icon">
+                                <button class="job-card__btn">Apply Now</button>
+                            </div>
+                           </div>
+                           </div>
+                        <div class="swiper-pagination"></div>
+                        </div>
+                        
                         </div>
                         </div>
+                        <div class="jobs__bottom-btn">
+                            <button class="bottom-btn">View More</button>
+                        </div>
+                        </div>
+                        
+                   <div class="main-block__reviews">
+                    <div class="main-block__container container">
+                        <div class="reviews-titleBlock">
+                              <div class="titleBlock-body">
+                            <h2 class="main-block__title">What Our Customer Says</h2>
+                        <p class="main-block__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                        </div>      
+                        </div>
+                      <div class="reviews-block">
+                        <div class="reviews-block__body">
+                            <div class="reviews-block__item">
+                                <div class="reviews-block__img">
+                                    <img src="assets/img/reviewImg.png" alt="Review image" class="review-img">
+                                    <img src="assets/img/reviewE.png" alt="Decoratio image" class="deco-img">
+                                    <img src="assets/img/dotsSquare.png" alt="Square image" class="dotsSquare-img">
+                                </div>
+
+                                
+                                 <div class="swiper reviewSwiper">
+                                    <div class="swiper-wrapper ">
+                                        
+                                        <div class="reviewSlider-body swiper-slide">
+                                    <div class="reviews-block__review active-slide">
+                                    
+                                    <div class="reviews-block__top  ">
+                                    <div class="reviews-block__title">William Smith</div>
+                                        <div class="reviews-block__subtitle">CEO OF THE LOVE STUDENTS</div>
+                                    </div>
+                                    <div class="reviews-block__rating">
+                                    <img src="assets/icons/stars.png" alt="Rating icon" class="stars-icon">
+                                    <div class="rating-points">4.8</div>
+                                    </div>
+                                    </div>
+                                    <div class="reviews-block__userReview ">
+
+                                        
+                                            
+                                        <div class="userReview__text ">
+                                            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                            Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi 
+                                            ut aliquip.Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                             Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi
+                                             ut aliquip.”
+                                        </div>
+                                        </div>
+                                        </div>
+
+                                            <div class="reviewSlider-body swiper-slide">
+
+                                                <div class="reviews-block__review active-slide">
+                                                    
+                                                    <div class="reviews-block__top  ">
+                                                    <div class="reviews-block__title">Jack Kachan</div>
+                                                        <div class="reviews-block__subtitle">BIG BOSS</div>
+                                                    </div>
+                                                    <div class="reviews-block__rating">
+                                                    <img src="assets/icons/stars.png" alt="Rating icon" class="stars-icon">
+                                                    <div class="rating-points">4.8</div>
+                                                    </div>
+                                                   
+                                                    <div class="reviews-block__userReview ">
+                
+                                                        
+                                                            
+                                                        <div class="userReview__text ">
+                                                            “Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                                            Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi 
+                                                            ut aliquip.Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                                                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                             Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi
+                                                             ut aliquip.”
+                                                        </div>
+                                                            </div>
+                                        </div>
+                                            </div>
+
+                                    
+                                 </div>
+                               
+                            </div>
+                            <div class="reviews-block__bottom">
+                                   <div class="bottom-body">
+                                        <div class="reviews-block__buttons">
+                                            <a href="#"><img src="assets/icons/arrow-left.svg" alt="arrow icon" class="reviews-button__left" ></a>
+                                            <a href="#"><img src="assets/icons/arrow-right.svg" alt="arrow icon" class="reviews-button__right " ></a>
+                                        </div>
+                                        <div class="reviews-block__usersImgs">
+                                            <img src="assets/img/usersImgs.png" alt="Users image" class="usersImgs" >
+                                        </div>
+                                        </div>
+                                    </div>
+                        </div>
+                        </div>
+                      
+                    
+
+                   </div>    
                 </div>
         </div>
+        
      </main>
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+     <script src="script.js"></script> 
+     
 </body>
 </html>

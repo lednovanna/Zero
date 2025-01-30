@@ -26,6 +26,9 @@ $color_21: #8F8F8F;
 $color_22: #898989;
 $color_23: #38318B;
 $color_24: #868686;
+$color_25: #584EC6;
+$color_26: #8A86B9;
+$color_27: #BDBBD9;
 $fz-xs: 12px;
 $fz-s: 14px;
 $fz-m: 16px;
@@ -565,11 +568,11 @@ a {
         justify-content: center;
     }
     .jobs__title {
-        @extend %mntitle
+        @extend %mntitle;
     }
 
     .jobs__subtitle {
-        @extend %mnsubtitle
+        @extend %mnsubtitle;
     }
 }
     .job__jobCards {
@@ -947,6 +950,146 @@ a {
         cursor: pointer;
     }
    }
-
+ //////statistic/////////////////////////////////////////////////////////////////
  
+     .main-block__statistic {
+        margin-top: 78px;
+        display: flex;
+        justify-content: space-around;
+        background-color: $color_9;
+        border-radius: 30px;
+        padding: 115px 120px 33px 120px;
+        .statistick-info {
             
+            text-align: center;
+            .statistick-amount {
+                font-family: $ff-o;
+                font-size: $fz-xxl;
+                letter-spacing: 5%;
+                line-height: 50px;
+                color: $color_25;
+            }
+            .statistic-name {
+                color: $color_11;
+                font-family: $ff-os;
+                font-size: $fz-m;
+                line-height: 24px;
+            }
+        }
+     }    
+     
+     /////Pricing Plan///////////////////////////////////////////////////////////////////////////
+     
+
+     .main-block__pricingPlane {
+        margin-top: 160px;
+        .pricingPlane-titleBlock {
+            display: flex;
+              justify-content: center; 
+            .titleBlock-body {
+               
+               
+               
+              .pricingPlan__title {
+                 @extend %mntitle;
+              }
+               .pricingPlan__subtitle {
+                @extend %mnsubtitle;
+                   
+               }
+
+
+            }           
+        }
+        .pricingPlane-cardsBody {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 75px;
+            .cardsBody-item {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;  
+                box-shadow: 0 4px 17px rgba(0, 0, 0, 0.15);
+                background: $color_11;
+                border-radius: 20px;
+                padding: 10px 65px 65px 65px;
+                
+
+                .item-status {
+                    text-align: center;
+                    color: $color_2;
+                    font-family: $ff-os;
+                    font-size: $fz-l;
+                    line-height: 30px;
+                    margin-top: 53px;
+                }
+                .item-price {
+                    text-align: center;
+                    color: $color_3;
+                    line-height: 55px;
+                    letter-spacing: 7%;
+                    font-family: $ff-o;
+                    font-size: $fz-xxxl;
+                    margin-top: 31px;
+                }
+
+                .price-period {
+                    font-family: $ff-os;
+                    font-size: $fz-m;
+                    color: $color_26;
+                    line-height: 24px;
+                    text-align: center;
+                    margin-top: 24px;
+                }
+                   .description-list__container {
+                        margin-top: 61px;
+                        .descriptions-list {
+                            display: flex;
+                            gap: 11px;
+                            padding: 10px 0 10px 0;
+                            .descriptions-icon {
+                                display: flex;
+                                justify-content: center;
+                                align-self: center;
+                            }
+                            .descriptions-text {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-family: $ff-os;
+                                font-size: $fz-s;
+                                color: $color_5;
+                                line-height: 24px;
+                            }
+                            
+                        }
+                        
+                    }
+               .description-btn {
+                                margin-top: 47px;
+                                display: flex;
+                                justify-content: center;
+                                
+                                .purchase-btn {
+                                    background: $color_27;
+                                    color: $color_11;
+                                    font-size: $fz-m;
+                                    font-family: $ff-os;
+                                    line-height: 62px;
+                                     border-radius: 50px;
+                                      border: none;
+                                       width: 172px;
+                                       height: 43px;
+                                       align-items: center;
+                                       justify-content: center;
+                                       display: flex;
+                                     
+                                      
+                                }
+                            }
+            }
+            
+            
+        }
+
+     }

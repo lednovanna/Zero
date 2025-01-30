@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
-.main-block__reviews .reviews-titleBlock .titleBlock-body .main-block__title, .main-block__jobs .jobs__title {
+.main-block__pricingPlane .pricingPlane-titleBlock .titleBlock-body .pricingPlan__title, .main-block__reviews .reviews-titleBlock .titleBlock-body .main-block__title, .main-block__jobs .jobs__title {
   text-align: center;
   font-family: "Oswald", serif;
   font-size: 40px;
@@ -12,7 +12,7 @@
   font-weight: 400;
 }
 
-.main-block__reviews .reviews-titleBlock .titleBlock-body .main-block__subtitle, .main-block__jobs .jobs__subtitle {
+.main-block__pricingPlane .pricingPlane-titleBlock .titleBlock-body .pricingPlan__subtitle, .main-block__reviews .reviews-titleBlock .titleBlock-body .main-block__subtitle, .main-block__jobs .jobs__subtitle {
   margin-top: 20px;
   text-align: center;
   max-width: 600px;
@@ -925,4 +925,160 @@ a {
   background-color: #F9FAFF;
   padding: 8px;
   cursor: pointer;
+}
+
+.main-block__statistic {
+  margin-top: 78px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #CED5F4;
+  border-radius: 30px;
+  padding: 115px 120px 33px 120px;
+}
+.main-block__statistic .statistick-info {
+  text-align: center;
+}
+.main-block__statistic .statistick-info .statistick-amount {
+  font-family: "Oswald", serif;
+  font-size: 40px;
+  letter-spacing: 5%;
+  line-height: 50px;
+  color: #584EC6;
+}
+.main-block__statistic .statistick-info .statistic-name {
+  color: white;
+  font-family: "Open Sans", serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.main-block__pricingPlane {
+  margin-top: 160px;
+}
+.main-block__pricingPlane .pricingPlane-titleBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.main-block__pricingPlane .pricingPlane-cardsBody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 75px;
+}
+.main-block__pricingPlane .pricingPlane-cardsBody .cardsBody-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 4px 17px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 17px rgba(0, 0, 0, 0.15);
+  background: white;
+  border-radius: 20px;
+  padding: 10px 65px 65px 65px;
+}
+.main-block__pricingPlane .pricingPlane-cardsBody .cardsBody-item .item-status {
+  text-align: center;
+  color: #4238AF;
+  font-family: "Open Sans", serif;
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 53px;
+}
+.main-block__pricingPlane .pricingPlane-cardsBody .cardsBody-item .item-price {
+  text-align: center;
+  color: #353434;
+  line-height: 55px;
+  letter-spacing: 7%;
+  font-family: "Oswald", serif;
+  font-size: 45px;
+  margin-top: 31px;
+}
+.main-block__pricingPlane .pricingPlane-cardsBody .cardsBody-item .price-period {
+  font-family: "Open Sans", serif;
+  font-size: 16px;
+  color: #8A86B9;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 24px;
+}
+.main-block__pricingPlane .pricingPlane-cardsBody .cardsBody-item .description-list__container {
+  margin-top: 61px;
+}
+.main-block__pricingPlane .pricingPlane-cardsBody .cardsBody-item .description-list__container .descriptions-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 11px;
+  padding: 10px 0 10px 0;
+}
+.main-block__pricingPlane .pricingPlane-cardsBody .cardsBody-item .description-list__container .descriptions-list .descriptions-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+.main-block__pricingPlane .pricingPlane-cardsBody .cardsBody-item .description-list__container .descriptions-list .descriptions-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Open Sans", serif;
+  font-size: 14px;
+  color: #A8A8A8;
+  line-height: 24px;
+}
+.main-block__pricingPlane .pricingPlane-cardsBody .cardsBody-item .description-btn {
+  margin-top: 47px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.main-block__pricingPlane .pricingPlane-cardsBody .cardsBody-item .description-btn .purchase-btn {
+  background: #BDBBD9;
+  color: white;
+  font-size: 16px;
+  font-family: "Open Sans", serif;
+  line-height: 62px;
+  border-radius: 50px;
+  border: none;
+  width: 172px;
+  height: 43px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }

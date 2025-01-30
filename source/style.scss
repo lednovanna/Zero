@@ -29,6 +29,9 @@ $color_24: #868686;
 $color_25: #584EC6;
 $color_26: #8A86B9;
 $color_27: #BDBBD9;
+$color_28: #DBE2FF;
+$color_29: #717171;
+$color_30: #3A2E5C;
 $fz-xs: 12px;
 $fz-s: 14px;
 $fz-m: 16px;
@@ -854,9 +857,7 @@ a {
 
      .reviews-block__img {
          position: relative;
-       .review-img{
-            
-       }
+       
        .deco-img {
             position: absolute;
             top: 13px;
@@ -1065,6 +1066,7 @@ a {
                         }
                         
                     }
+                  
                .description-btn {
                                 margin-top: 47px;
                                 display: flex;
@@ -1092,4 +1094,91 @@ a {
             
         }
 
+     }
+
+     ///////FOOTER////////////////////////////////////////////////////////////////////////////
+     .footer {
+       border-radius: 40px 40px 0 0;  
+        background-color: $color_28;
+    
+     .footer-block {
+        margin-top: 119px;
+        padding: 20px;
+        width: 100%;
+
+        .footer-body {
+            
+            display: flex;
+            justify-content: space-between;
+          .footer__column {
+            margin-top: 110px;
+            .footer-title {
+                font-family: $ff-o;
+                font-size: $fz-xl;
+                color: $color_3;
+                line-height: 26px;
+                font-weight: 400;
+            }
+            ul {
+                list-style: none;
+                margin-top: 28px;
+                
+                li {
+                    padding: 10px 0 10px 0;
+                    
+                    font-family: $ff-os;
+                    font-size: $fz-m;
+                    line-height: 26px;
+                }
+                a {
+                    color: $color_29;
+                }
+            }
+          }
+        }
+     }
+
+     .divider {
+        height: 2px;
+        background-color: $color_10;
+        margin-top: 90px; 
+        width: 100%;
+    }
+    .footer-block__bottom {
+        display: flex;
+        justify-content: space-between;
+        margin: 14px 0;
+        .footer__logo {
+            width: 62px;
+            height: 25px;
+            cursor: pointer;
+        }
+        
+        .footer-center-item  {
+                margin-left: 65px;
+                color: $color_30;
+                font-size: $fz-xs;
+                font-family: $ff-os;
+                line-height: 26px;
+                cursor: pointer;
+                font-weight: 500;
+            }
+          .extra {
+          font-size: $fz-s;
+          font-weight: 600;
+         }
+         .footer__right-icon{
+            background-color: $color_11;
+            border-radius: 50px;
+            padding: 8px;
+            width: 29px;
+            height: 29px;
+            margin-left: 10px;
+            cursor: pointer;
+         }
+         .twitter-extra {
+            background: $color_2;
+         }
+    }
+   
      }

@@ -18,6 +18,8 @@ const  swiper = new Swiper('.mySwiper', {
             updateActiveSlide();
         }
     }
+
+    
 });
 
 function updateActiveSlide() {
@@ -68,6 +70,46 @@ const reviewSwiper = new Swiper('.reviewSwiper', {
         keyboard: true,
     });
 
+    const buttonLeft = document.querySelector(".reviews-button__left");
+    const buttonRight = document.querySelector(".reviews-button__right"); 
+ 
+    
+    
+
+    buttonLeft.addEventListener("click", () => {
+        buttonLeft.classList.add("orange");
+        buttonRight.classList.remove("orange");
+
+        
+        
+    });
+    
+        buttonRight.addEventListener("click", () => {
+        buttonRight.classList.add("orange");
+        buttonLeft.classList.remove("orange");
+
+       
+ });
+
+ 
+ 
+    const buttonSwiperLeft = document.querySelector(".swiper-button__left");
+    const buttonSwiperRight = document.querySelector(".swiper-button__right");
+
+    buttonSwiperRight.addEventListener("click", () => {
+    buttonSwiperRight.classList.add("orange");
+    buttonSwiperLeft.classList.remove("orange");
+
+   
+});
+
+    buttonSwiperLeft.addEventListener("click", () => {
+    buttonSwiperLeft.classList.add("orange");
+    buttonSwiperRight.classList.remove("orange");
+
+    
+
+   
+    });
 
 })
-

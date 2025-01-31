@@ -32,6 +32,7 @@ $color_27: #BDBBD9;
 $color_28: #DBE2FF;
 $color_29: #717171;
 $color_30: #3A2E5C;
+$color_31: #FFC085;
 $fz-xs: 12px;
 $fz-s: 14px;
 $fz-m: 16px;
@@ -503,14 +504,15 @@ a {
             margin-top: 60px;
 
             .advantage-cards__item {
-                
+             margin: 5px;
              box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.09);
-            
+             transition: transform 0.3s ease, background-color 0.3s ease;
             padding: 40px 37px 34px 37px;
             
             
             }
-            
+          
+           
 
             .advantages-icon {
                 padding: 8px;
@@ -546,16 +548,19 @@ a {
             .advantages-card__title {
                 margin: 22px 0 15px 0;
             }
-            .top {
-                margin-top: -25px;
-                background: $color_8;
-            }
+            
         }
          .titleBlock-body {
                justify-content: center; 
                padding: 40 px 37px;
             }
-          }  
+            .advantage-cards__item:hover {
+                transform: scale(1.1); 
+                background-color: $color_8; 
+            }
+          }
+          
+          
 /////JOB CARDS///////////////////////////////////////////////////////////////////////////////////////*
 
 .main-block__jobs {
@@ -592,6 +597,20 @@ a {
             transform: translateX(-50%);
             gap: 5px;
             
+            .body-button__left {
+                background: $color_8;
+                border-radius: 8px;
+                cursor: pointer;
+                
+                
+            }
+            .body-button__right {
+                background: $color_8;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+
+            
             .toggleButton {
                 display: flex;
                 justify-content: center;
@@ -604,31 +623,27 @@ a {
                 fill: $color_19;
             }
             .swiper-button__left {
-                background: $color_8;
-                fill: $color_19;
-                cursor: pointer;
                 padding: 12px;
-                
-               
+                fill: $color_11;
+                width: 40px;
+                height: 40px;
+                border-radius: 8px;
             }
               
 
-             .swiper-button__right  {
-                background: $color_8;
-                color: $color_11;
+             .swiper-button__right {
+                border-radius: 8px;
+                fill: $color_11;
                 cursor: pointer;
                 padding: 12px;
-                width: 40px ;
+                width: 40px;
+                height: 40px;
                 
             }
              
 
 
-            .orange {
-                background: $color_11;
-                color: $color_19;
-                 
-            }
+            
 
             .white {
                 background-color: #FFC085;
@@ -641,7 +656,7 @@ a {
             .job-cards__body {
                 display: flex;
                 justify-content: center;
-             
+                 
                 transition: transform 0.3s ease-in-out;
                 
                 .job-cards__item {
@@ -768,20 +783,20 @@ a {
             }   
             .swiper-slide-active {
                 transform: scale(1.1); 
-                
+                background: $color_8; 
                 
                 transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
             }  
            
             .active-slide{
-                background: $color_8; /* Новый фон */
-                transform: scale(0.9); /* Увеличение */
+                color: #38318B;
+                transform: scale(0.9);
                 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             }
             
             /* Изменяем цвет кнопки */
             .active-slide .job-card__btn {
-                background: #EF6010; /* Новый цвет кнопки */
+                background: #EF6010; 
                 color: white;
             }
             
@@ -925,31 +940,55 @@ a {
     }
     .reviews-block__bottom {
         margin-top: 51px;
+        .bottom-body {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+    }
+    .reviews-block__buttons {
         display: flex;
-        justify-content: space-between;
+        gap: 10px;
     }
+    .reviews-body__left {
+     
+     
     .reviews-button__left {
-        width: 40px;
-        height: 40px;
+         width: 40px;
+      height: 40px;
+      border-radius: 8px;
+        
         border-radius: 8px;
         transition: fill 0.3s ease;
         transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
         fill: $color_19;
-        background-color: $color_8;
+         background-color: $color_8;
         padding: 8px;
         cursor: pointer;
     }
+    }
+
+    .reviews-body__right { 
+       
+       
     .reviews-button__right {
-        width: 40px;
+       border-radius: 8px; 
+       width: 40px;
         height: 40px;
-        border-radius: 8px;
+         background-color: $color_8;
         transition: fill 0.3s ease;
         transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
         fill: $color_19;
-        background-color: $color_8;
+        
         padding: 8px;
         cursor: pointer;
     }
+}
+    .reviews-active {
+        background: #38318B;
+        color: white;
+    }
+    
    }
  //////statistic/////////////////////////////////////////////////////////////////
  
@@ -1007,6 +1046,7 @@ a {
             justify-content: space-between;
             margin-top: 75px;
             .cardsBody-item {
+                margin: 5px;
                 display: flex;
                 justify-content: center;
                 flex-direction: column;  
@@ -1014,7 +1054,7 @@ a {
                 background: $color_11;
                 border-radius: 20px;
                 padding: 10px 65px 65px 65px;
-                
+                transition: transform 0.3s ease, background-color 0.3s ease;
 
                 .item-status {
                     text-align: center;
@@ -1062,8 +1102,11 @@ a {
                                 color: $color_5;
                                 line-height: 24px;
                             }
+
+                            
                             
                         }
+                        
                         
                     }
                   
@@ -1072,6 +1115,7 @@ a {
                                 display: flex;
                                 justify-content: center;
                                 
+
                                 .purchase-btn {
                                     background: $color_27;
                                     color: $color_11;
@@ -1088,13 +1132,23 @@ a {
                                      
                                       
                                 }
+
                             }
+                         
             }
-            
+             
             
         }
-
+        .cardsBody-item:hover {
+            transform: scale(1.1); /* Увеличение на 10% */
+            background-color: $color_8; /* Меняем цвет при наведении */
+      
+        }
+           .cardsBody-item:hover button.purchase-btn {
+                                background: #38318B !important;
+                            }  
      }
+    
 
      ///////FOOTER////////////////////////////////////////////////////////////////////////////
      .footer {
@@ -1182,3 +1236,11 @@ a {
     }
    
      }
+
+     .orange {
+        background: $color_31 !important;
+        color: $color_8 !important;
+         
+    }
+
+   

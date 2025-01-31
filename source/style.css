@@ -463,8 +463,13 @@ a {
   margin-top: 60px;
 }
 .main-block__container .advantages-cards__body .advantage-cards__item {
+  margin: 5px;
   -webkit-box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.09);
           box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.09);
+  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, -webkit-transform 0.3s ease;
   padding: 40px 37px 34px 37px;
 }
 .main-block__container .advantages-cards__body .advantages-icon {
@@ -496,15 +501,16 @@ a {
 .main-block__container .advantages-cards__body .advantages-card__title {
   margin: 22px 0 15px 0;
 }
-.main-block__container .advantages-cards__body .top {
-  margin-top: -25px;
-  background: #F9FAFF;
-}
 .main-block__container .titleBlock-body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   padding: 40 px 37px;
+}
+.main-block__container .advantage-cards__item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: #F9FAFF;
 }
 
 .main-block__jobs {
@@ -543,6 +549,16 @@ a {
           transform: translateX(-50%);
   gap: 5px;
 }
+.job__jobCards .action-button__buttons .body-button__left {
+  background: #F9FAFF;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.job__jobCards .action-button__buttons .body-button__right {
+  background: #F9FAFF;
+  border-radius: 8px;
+  cursor: pointer;
+}
 .job__jobCards .action-button__buttons .toggleButton {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -563,21 +579,19 @@ a {
   fill: #EF6010;
 }
 .job__jobCards .action-button__buttons .swiper-button__left {
-  background: #F9FAFF;
-  fill: #EF6010;
-  cursor: pointer;
   padding: 12px;
+  fill: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
 }
 .job__jobCards .action-button__buttons .swiper-button__right {
-  background: #F9FAFF;
-  color: white;
+  border-radius: 8px;
+  fill: white;
   cursor: pointer;
   padding: 12px;
   width: 40px;
-}
-.job__jobCards .action-button__buttons .orange {
-  background: white;
-  color: #EF6010;
+  height: 40px;
 }
 .job__jobCards .action-button__buttons .white {
   background-color: #FFC085;
@@ -735,20 +749,21 @@ a {
 .job__jobCards .swiper-slide-active {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+  background: #F9FAFF;
   -webkit-transition: background-color 0.5s ease, -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
   transition: background-color 0.5s ease, -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
   transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
   transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease, -webkit-transform 0.5s ease, -webkit-box-shadow 0.5s ease;
 }
 .job__jobCards .active-slide {
-  background: #F9FAFF; /* Новый фон */
+  color: #38318B;
   -webkit-transform: scale(0.9);
-          transform: scale(0.9); /* Увеличение */
+          transform: scale(0.9);
   -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
           box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 .job__jobCards .active-slide .job-card__btn {
-  background: #EF6010; /* Новый цвет кнопки */
+  background: #EF6010;
   color: white;
 }
 .job__jobCards .active-slide .heart-icon {
@@ -893,6 +908,8 @@ a {
 }
 .main-block__reviews .reviews-block__bottom {
   margin-top: 51px;
+}
+.main-block__reviews .reviews-block__bottom .bottom-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -900,9 +917,16 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.main-block__reviews .reviews-button__left {
+.main-block__reviews .reviews-block__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.main-block__reviews .reviews-body__left .reviews-button__left {
   width: 40px;
   height: 40px;
+  border-radius: 8px;
   border-radius: 8px;
   -webkit-transition: fill 0.3s ease;
   transition: fill 0.3s ease;
@@ -913,18 +937,22 @@ a {
   padding: 8px;
   cursor: pointer;
 }
-.main-block__reviews .reviews-button__right {
+.main-block__reviews .reviews-body__right .reviews-button__right {
+  border-radius: 8px;
   width: 40px;
   height: 40px;
-  border-radius: 8px;
+  background-color: #F9FAFF;
   -webkit-transition: fill 0.3s ease;
   transition: fill 0.3s ease;
   -webkit-transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
   transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
   fill: #EF6010;
-  background-color: #F9FAFF;
   padding: 8px;
   cursor: pointer;
+}
+.main-block__reviews .reviews-active {
+  background: #38318B;
+  color: white;
 }
 
 .main-block__statistic {
@@ -976,6 +1004,7 @@ a {
   margin-top: 75px;
 }
 .main-block__pricingPlane .pricingPlane-cardsBody .cardsBody-item {
+  margin: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -991,6 +1020,10 @@ a {
   background: white;
   border-radius: 20px;
   padding: 10px 65px 65px 65px;
+  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, -webkit-transform 0.3s ease;
 }
 .main-block__pricingPlane .pricingPlane-cardsBody .cardsBody-item .item-status {
   text-align: center;
@@ -1082,6 +1115,14 @@ a {
   display: -ms-flexbox;
   display: flex;
 }
+.main-block__pricingPlane .cardsBody-item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1); /* Увеличение на 10% */
+  background-color: #F9FAFF; /* Меняем цвет при наведении */
+}
+.main-block__pricingPlane .cardsBody-item:hover button.purchase-btn {
+  background: #38318B !important;
+}
 
 .footer {
   border-radius: 40px 40px 0 0;
@@ -1167,4 +1208,9 @@ a {
 }
 .footer .footer-block__bottom .twitter-extra {
   background: #4238AF;
+}
+
+.orange {
+  background: #FFC085 !important;
+  color: #F9FAFF !important;
 }

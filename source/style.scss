@@ -79,6 +79,7 @@ html, body {
     background-color: $color_11;
     box-sizing: border-box;
     font-style: normal;
+    overflow-x: hidden;
 }
 
 a {
@@ -97,15 +98,17 @@ a {
 .header {
     background: $color_7;
     max-width: 100%;
-    padding-top: 23px;
+    padding: 23px 10px 10px 10px;
     .header__container{
         display: flex;
         justify-content: space-around;
+        max-width: 100%;
         
     }
     .header_logo{
       height: 45px;
-      width: 104px;
+      max-width: 104px;
+      margin-right: 40px;
     }
    
    
@@ -121,7 +124,7 @@ a {
         font-size: $fz-s;
         font-family: $ff-os;
         font-style: normal;
-        margin-right: 20px;
+        margin-right: 13px;
         letter-spacing: 2%;
         line-height: 24px;
         font-weight: 500;
@@ -173,12 +176,12 @@ a {
         padding: 8px 8px 8px 10px;
         border-radius: 8px;
         font-size: 12px;
-        font-weight: 200;
-        width: 307px;
+        border-radius: 50px;
+        max-width: 300px;
         font-family: $ff-os;
         font-size: $fz-s;
         letter-spacing: 2%;
-        border-radius: 50px;
+    
     }
     .search-icon {
         display: flex;
@@ -325,6 +328,156 @@ a {
              width: 601px;
                height: 523px;
            }
+              
+           .open {
+            display: flex !important;
+           }
+           .burger {
+            display: none;
+            justify-content: flex-end;
+            position: relative;
+            z-index: 50;
+            align-items: center;
+            width: 25px;
+            height: 16px;
+           }
+
+           .burger span {
+            height: 2px;
+            width: 80%;
+            transform: scale(1);
+            background: $color_1;
+           }
+
+           .burger::before,.burger::after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background-color: $color_1;
+            transition: all 0.3s ease 0s;
+           }
+
+           .burger::before {
+            top: 0;
+           }
+
+           .burger::after {
+            bottom: 0;
+           }
+
+           .burger.active-burger span {
+            transform: scale(0);
+           }
+
+           .burger.active-burger::before {
+            top: 50%;
+            transform: rotate(45deg) translate(0, -55%);
+           }
+
+           .burger.active-burger::after {
+            bottom: 50%;
+            transform: rotate(-45deg) translate(0, 55%);
+           }
+
+           @media  (max-width: 900px) {
+              .burger {
+                display: flex;
+              }
+              .header_menu {
+                display: none;
+                position: fixed;
+                height: 40%;
+                width: 100%;
+                z-index: 50;
+                overflow-y: auto;
+                padding: 20px;
+                margin-top: 70px;
+                background: $color_7;
+                animation: burgerAnimation 0.4s;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+
+              }
+
+              .menu_list {
+                display: flex;
+                flex-direction: column;
+                
+                
+              }
+
+              @keyframes burgerAnimation {
+                from {opacity: 0}
+                to {opacity: 1}
+              }
+
+              .header__content-image img{
+                object-position: right;
+              }
+           }
+
+           @media  (max-width: 860px) {
+              .header__content-image img {
+                max-width: 500px;
+                height: 423px;
+              }
+              .header__content-header {
+                font-size: $fz-xxl;
+              }
+           }
+
+           @media (max-width: 760px) {
+            .header__content-block {
+                flex-direction: column-reverse;
+            }
+            .header__content-image {
+                align-self: center;
+            }
+            .header__content-header {
+                text-align: center;
+            }
+            .header__content-text {
+                padding: 5px 25px;
+                text-align: center;
+            }
+            .header__content-bottom {
+                justify-content: center;
+            }
+           }
+
+           @media (max-width: 640) {
+            .header_logo {
+                height: 35px;
+                width: 85px;
+                margin-right: 10px;
+            }
+                .search-input {
+                padding: 8px;
+                font-size: 12px;
+                width: 200px;
+                
+               
+            }
+            .input-login__autorisation {
+                display: flex;
+            flex-direction: column;
+           }
+           
+        }
+
+        @media (max-width: 530px) {
+            .input-login__input {
+                display: none;
+            }
+            .header_logo {
+                height: 25px;
+                width: 65px;
+                margin-right: auto;
+            }
+        }
         //**********************************************************************************//
       .main-block__container {
            background: $color_11;
@@ -333,14 +486,46 @@ a {
        .main-block-labels {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
 
        } 
        .label-img {
          max-width: 100%;
+         margin: 5px;
        }
 
+       .designSt {
+        max-width: 57px;
+         height: 67px;
+       }
+       .design {
+        max-width: 126px;
+         height: 106px;
+       }
+
+       .greenery {
+       max-width: 153px;
+        height: 69px;
+       }
+       .natural {
+       max-width: 120px; 
+        height: 112px;
+       }
+
+       .nature {
+        max-width: 110px;
+         height: 72px;
+       }
+
+       .company {
+       max-width: 105px;
+        height: 104px;
+       }
+       
+
     .main-block__findJob {
-        margin-top: 66px;
+        
+        margin: 66px 5px 0 5px;
         .findJob-text {
             color: $color_4;
             font-family: $ff-o;
@@ -459,11 +644,18 @@ a {
         }
       }
 
+      @media (max-width: 750px) {
+        .findJob-container {
+            flex-direction: column-reverse;
+        }
+
+      }
+
       ////////////////////////////////////////////////////////////////////////////////*
        
       .main-block__advantages {
         
-        margin-top: 119px;
+        margin: 119px 5px 0 5px;
         
       }
       .advantages-titleBlock {
@@ -560,7 +752,15 @@ a {
             }
           }
           
-          
+          @media (max-width: 750px) {
+            .advantages-cards {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+           
+          }
+
 /////JOB CARDS///////////////////////////////////////////////////////////////////////////////////////*
 
 .main-block__jobs {
@@ -840,7 +1040,7 @@ a {
 ///reviews///////////////////////////////////////////////////
 
 .main-block__reviews {
-    margin-top: 119px;
+    margin: 119px 5px 0 5px;
     
     .reviews-titleBlock {
         display: flex;
@@ -990,17 +1190,42 @@ a {
     }
     
    }
+
+   @media (max-width: 750px) {
+    .reviews-block__item  {
+        flex-direction: column;
+        
+    }
+
+    .swiper {
+        margin: 5px;
+    }
+    .reviews-block__img {
+        align-self: center;
+    }
+    .swiper-wrapper {
+       max-width: 350px;
+    }
+   }
+
+   @media (max-width: 440px) {
+    .review-img {
+        max-width: 300px;
+        max-height: 300px;
+    }
+   }
  //////statistic/////////////////////////////////////////////////////////////////
  
      .main-block__statistic {
         margin-top: 78px;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        justify-content: space-between;
         background-color: $color_9;
         border-radius: 30px;
         padding: 115px 120px 33px 120px;
         .statistick-info {
-            
+             margin: 5px;
             text-align: center;
             .statistick-amount {
                 font-family: $ff-o;
@@ -1017,12 +1242,27 @@ a {
             }
         }
      }    
-     
+      @media (max-width: 750px) {
+        
+        .main-block__statistic { 
+            padding: 50px 30px; 
+           
+
+        }
+        .main-block__statistic .statistick-info .statistick-amount  {
+            font-size: $fz-m;
+            line-height: 35px;
+        }
+        .main-block__statistic .statistick-info .statistic-name {
+           line-height: 20px;
+           font-size: $fz-s;
+        }
+      }
      /////Pricing Plan///////////////////////////////////////////////////////////////////////////
      
 
      .main-block__pricingPlane {
-        margin-top: 160px;
+        margin: 160px 5px 0 5px;
         .pricingPlane-titleBlock {
             display: flex;
               justify-content: center; 
@@ -1045,6 +1285,7 @@ a {
             display: flex;
             justify-content: space-between;
             margin-top: 75px;
+            gap: 30px;
             .cardsBody-item {
                 margin: 5px;
                 display: flex;
@@ -1084,6 +1325,7 @@ a {
                 }
                    .description-list__container {
                         margin-top: 61px;
+                        align-self: center;
                         .descriptions-list {
                             display: flex;
                             gap: 11px;
@@ -1149,7 +1391,23 @@ a {
                             }  
      }
     
+    @media (max-width: 1040px) {
+        .cardsBody-item {
+            padding: 10px 20px;
+            margin: 15px;
+        }
+    }
 
+    @media (max-width: 860px) {
+        .pricingPlane-cardsBody {
+            flex-direction: column;
+            
+        }
+         .main-block__pricingPlane .pricingPlane-cardsBody .cardsBody-item {
+             padding: 20px 15px;
+            margin: 60px;
+        }
+    }
      ///////FOOTER////////////////////////////////////////////////////////////////////////////
      .footer {
        border-radius: 40px 40px 0 0;  
@@ -1241,6 +1499,24 @@ a {
         background: $color_31 !important;
         color: $color_8 !important;
          
+    }
+
+    @media (max-width: 750px) {
+        
+       .footer .footer-block .footer-body .footer__column .footer-title {
+            font-size: $fz-m;
+            line-height: 20px;
+        }
+
+        .footer .footer-block .footer-body .footer__column  ul li {
+            font-size: $fz-xs;
+            line-height: 20px;
+        }
+       
+       .footer .footer-block {
+            margin-top: 100px;
+            padding: 10px;
+        }
     }
 
    

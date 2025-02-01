@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+
 const  swiper = new Swiper('.mySwiper', {
     slidesPerView: 3,
     spaceBetween: 10,
@@ -112,4 +113,12 @@ const reviewSwiper = new Swiper('.reviewSwiper', {
    
     });
 
+  document.querySelector('.burger').addEventListener('click', function() {
+      this.classList.toggle('active-burger');
+    document.querySelector('.header_menu').classList.toggle('open');
+    }) 
+
 })
+
+
+

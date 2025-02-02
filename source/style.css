@@ -689,6 +689,7 @@ a {
   transition: transform 0.3s ease, background-color 0.3s ease;
   transition: transform 0.3s ease, background-color 0.3s ease, -webkit-transform 0.3s ease;
   padding: 40px 37px 34px 37px;
+  border-radius: 10px;
 }
 .main-block__container .advantages-cards__body .advantages-icon {
   padding: 8px;
@@ -763,8 +764,6 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* Изменяем цвет кнопки */
-  /* Изменяем цвет иконки */
 }
 .job__jobCards .action-button__buttons {
   display: -webkit-box;
@@ -790,25 +789,6 @@ a {
   background: #F9FAFF;
   border-radius: 8px;
   cursor: pointer;
-}
-.job__jobCards .action-button__buttons .toggleButton {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  -webkit-transition: fill 0.3s ease;
-  transition: fill 0.3s ease;
-  -webkit-transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
-  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
-  fill: #EF6010;
 }
 .job__jobCards .action-button__buttons .swiper-button__left {
   padding: 12px;
@@ -842,6 +822,7 @@ a {
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 .job__jobCards .job-cards__body .job-cards__item {
+  margin: 0 10px 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -854,7 +835,7 @@ a {
           flex: 1 1 calc(45% - 20px);
   height: 465px;
   max-width: 380px;
-  background-color: #fff;
+  background-color: white;
   -webkit-box-shadow: 0 4px 17px rgba(0, 0, 0, 0.15);
           box-shadow: 0 4px 17px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
@@ -949,7 +930,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #F3E0FF;
+  background: #BDBBD9;
   padding: 15px 35px;
   border: none;
   border-radius: 47px;
@@ -978,7 +959,7 @@ a {
 .job__jobCards .swiper-wrapper {
   width: 65%;
 }
-.job__jobCards .swiper-slide-active {
+.job__jobCards .swiper-slide-active .job-cards__item {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   background: #F9FAFF;
@@ -994,13 +975,12 @@ a {
   -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
           box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-.job__jobCards .active-slide .job-card__btn {
-  background: #EF6010;
-  color: white;
+.job__jobCards .job-cards__item.active-slide .active-btn {
+  background: #544CAC !important;
+  color: white !important;
 }
-.job__jobCards .active-slide .heart-icon {
-  -webkit-filter: invert(100%);
-          filter: invert(100%); /* Делаем иконку белой */
+.job__jobCards .job-cards__item.active-slide .active-heart {
+  background-color: #EF6010 !important;
 }
 
 .jobs__bottom-btn {
@@ -1040,6 +1020,106 @@ a {
   opacity: 0.5;
 }
 
+@media (max-width: 1500px) {
+  .main-block__jobs .job__jobCards .mySwiper .swiper-wraper .job-cards__item {
+    height: 365px;
+    max-width: 200px;
+    padding: 5px;
+  }
+}
+@media (max-width: 1024px) {
+  .job-cards__item {
+    max-width: 320px !important; /* 🔹 Уменьшаем карточку */
+    height: 400px !important; /* 🔹 Делаем ниже */
+    padding: 10px 20px !important;
+  }
+  .job-card__salary {
+    margin-top: 20px !important;
+  }
+  .job-card__bottom {
+    margin: 17px !important;
+  }
+  .job-card__btn {
+    padding: 10px 30px !important;
+  }
+}
+@media (max-width: 900px) {
+  .swiper {
+    width: 100%;
+    overflow: hidden;
+  }
+  .job__jobCards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .action-button__buttons {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-top: 10px;
+  }
+  .job-cards__item {
+    max-width: 280px !important;
+    height: 400px !important;
+    padding: 6px;
+  }
+  .heart-icon {
+    padding: 10px !important;
+  }
+  .item-dotsIcon {
+    margin-left: 220px !important;
+  }
+  .job-card__title {
+    margin-top: 21px !important;
+    font-size: 14px !important;
+  }
+  .job-card__subtitle {
+    margin-top: 10px !important;
+  }
+  .job-card__salary {
+    margin-top: 22px !important;
+  }
+  .job-card__btn {
+    padding: 12px 16px !important;
+  }
+}
+@media (max-width: 480px) {
+  .job-cards__item {
+    max-width: 250px !important;
+    height: 400px !important;
+    padding: 4px;
+  }
+  .job-card__btn {
+    padding: 10px 13px !important;
+  }
+  .heart-icon {
+    padding: 8px !important;
+  }
+  .item-dotsIcon {
+    margin-left: 170px !important;
+  }
+  .job-card__title {
+    margin-top: 21px !important;
+    font-size: 14px !important;
+  }
+  .job-card__subtitle {
+    margin-top: 10px !important;
+  }
+  .job-card__salary {
+    margin-top: 22px !important;
+  }
+  .location-icon {
+    height: 30px;
+  }
+  .money-icon {
+    height: 30px;
+  }
+}
 .main-block__reviews {
   margin: 119px 5px 0 5px;
 }
@@ -1187,6 +1267,13 @@ a {
   color: white;
 }
 
+@media (max-width: 1024px) {
+  .job-cards__item {
+    max-width: 320px;
+    height: 400px;
+    padding: 8px;
+  }
+}
 @media (max-width: 750px) {
   .reviews-block__item {
     -webkit-box-orient: vertical;
@@ -1277,7 +1364,7 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 75px;
-  gap: 30px;
+  gap: 20px;
 }
 .main-block__pricingPlane .pricingPlane-cardsBody .cardsBody-item {
   margin: 5px;
@@ -1295,7 +1382,7 @@ a {
           box-shadow: 0 4px 17px rgba(0, 0, 0, 0.15);
   background: white;
   border-radius: 20px;
-  padding: 10px 65px 65px 65px;
+  padding: 10px 35px;
   -webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
   transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
   transition: transform 0.3s ease, background-color 0.3s ease;
@@ -1400,12 +1487,12 @@ a {
   background-color: #F9FAFF; /* Меняем цвет при наведении */
 }
 .main-block__pricingPlane .cardsBody-item:hover button.purchase-btn {
-  background: #38318B !important;
+  background: #544CAC !important;
 }
 
 @media (max-width: 1040px) {
-  .cardsBody-item {
-    padding: 10px 20px;
+  .main-block__container .main-block__pricingPlane .pricingPlane-cardsBody .cardsBody-item {
+    padding: 40px !important;
     margin: 15px;
   }
 }
@@ -1416,9 +1503,23 @@ a {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .main-block__pricingPlane .pricingPlane-cardsBody .cardsBody-item {
-    padding: 20px 15px;
-    margin: 60px;
+  .pricingPlane-cardsBody {
+    margin: 30px;
+  }
+  .item-status {
+    margin-top: 43px;
+  }
+  .item-price {
+    margin-top: 21px;
+  }
+  .price-period {
+    margin-top: 18px;
+  }
+  .description-list__container {
+    margin-top: 41px;
+  }
+  .description-btn {
+    margin-top: 37px;
   }
 }
 .footer {

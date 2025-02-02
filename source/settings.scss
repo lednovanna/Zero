@@ -1,0 +1,63 @@
+$color_1:#272323;
+$color_2: #4238AF;
+$color_3: #353434;
+$color_4: #FF5C00;
+$color_5: #A8A8A8;
+$color_6:  #544CAC;
+$color_7: #F5F7FF;
+$color_8: #F9FAFF;
+$color_9: #CED5F4;
+$color_10: #625BAE;
+$color_11: #ffff;
+$color_12: #A5A5A5;
+$color_13: #9444C9;
+$color_14: #F3E0FF;
+$color_15: #E7E9FE;
+$color_16: #FFDECC;
+$color_17: #323232;
+$color_18: #6156DC;
+$color_19: #EF6010;
+$color_20: #A73EED;
+$color_21: #8F8F8F;
+$color_22: #898989;
+$color_23: #38318B;
+$color_24: #868686;
+$color_25: #584EC6;
+$color_26: #8A86B9;
+$color_27: #BDBBD9;
+$color_28: #DBE2FF;
+$color_29: #717171;
+$color_30: #3A2E5C;
+$color_31: #FFC085;
+$fz-xs: 12px;
+$fz-s: 14px;
+$fz-m: 16px;
+$fz-l: 20px;
+$fz-xl: 24px;
+$fz-xxl: 40px;
+$fz-xxxl: 45px;
+$ff-prom: "Prompt", serif;
+$ff-os: "Open Sans", serif;
+$ff-o: "Oswald", serif;
+%mntitle {
+    
+        text-align: center;
+        font-family: $ff-o;
+        font-size: $fz-xxl;
+        letter-spacing: 5%;
+        line-height: 50px;
+        color: $color_3;
+        font-weight: 400;
+       
+}
+
+%mnsubtitle {
+    margin-top: 20px;
+        text-align: center;
+        max-width: 600px;
+        color: $color_5;
+        font-family: $ff-os;
+        line-height: 24px;
+        font-size: $fz-s;
+}
+

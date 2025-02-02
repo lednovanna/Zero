@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 const  swiper = new Swiper('.mySwiper', {
-    slidesPerView: 3,
+    slidesPerView: "auto",
     spaceBetween: 10,
     loop:true,
     speed: 500,
@@ -14,47 +14,92 @@ const  swiper = new Swiper('.mySwiper', {
     mousewheel: true,
     keyboard: true,
 
+    breakpoints: {
+       
+        320: {
+            slidesPerView: 1, // Для планшетов — 2 карточки
+        },
+
+        768: {
+            slidesPerView: 2, // Для экранов до 320px — 1 карточка
+        },
+
+        900:  {
+            slidesPerView: 2, // Для экранов до 320px — 1 карточка
+        },
+
+        1024: {
+            slidesPerView: 3, // Для экранов до 320px — 1 карточка
+        },
+        
+    },
+
     on: {
-        slideChange: function () {
-            updateActiveSlide();
-        }
+        slideChange: updateActiveSlide()
+        
+            
     }
 
     
 });
 
 function updateActiveSlide() {
-    const slides = document.querySelectorAll(".swiper-slide");
+    const slides = document.querySelectorAll(".swiper-slide .job-cards__item");
+    
+
     
     slides.forEach(slide => {
-        slide.classList.remove("active-slide"); // Удаляем выделение у всех карточек
-    });
+        const parentSlide = slide.closest(".swiper-slide"); 
 
-    const activeSlide = document.querySelector(".swiper-slide-active"); // Первая карточка
-    if (activeSlide) {
-        activeSlide.classList.add("active-slide");
+        if (parentSlide.classList.contains("swiper-slide-active")) {
+            slide.classList.add("active-slide"); 
+            applyActiveStyles(slide);
+        } else {
+            slide.classList.remove("active-slide"); 
+            resetStyles(slide);
+        }
+    });
+}
+
+function resetStyles(slide) {
+    const button = slide.querySelector(".job-card__btn");
+    const heartIcon = slide.querySelector(".heart-icon");
+
+    if (button) {
+        button.classList.remove("active-btn");
+    
+    }
+
+    if (heartIcon) {
+        heartIcon.classList.remove("active-heart");
+        
     }
 }
 
-// Вызываем функцию при загрузке страницы
-updateActiveSlide();
+function applyActiveStyles(slide) {
+    const button = slide.querySelector(".job-card__btn");
+    const heartIcon = slide.querySelector(".heart-icon");
+
+    if (button) {
+        button.classList.add("active-btn");
+        
+    }
+
+    if (heartIcon) {
+        heartIcon.classList.add("active-heart"); 
+    }
+}
+
+document.addEventListener("DOMContentLoaded", updateActiveSlide);
+document.querySelector(".mySwiper").addEventListener("transitionend", updateActiveSlide); 
 
 
-const buttons = document.querySelectorAll(".toggleCardButton"); // Получаем все кнопки
 
-buttons.forEach(button => {
-    button.addEventListener("mouseenter", () => {
-        console.log("Навели на кнопку:", button); 
-        button.classList.toggle("violet");
-        button.classList.toggle("red");
-    });
 
-    button.addEventListener("mouseleave", () => {
-        console.log("Убрали курсор с кнопки:", button); 
-        button.classList.toggle("violet");
-        button.classList.toggle("red");
-    });
-});
+
+
+
+
 
 const reviewSwiper = new Swiper('.reviewSwiper', {
     
